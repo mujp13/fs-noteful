@@ -1,0 +1,27 @@
+.folder-container {
+  padding: 15px;
+  box-sizing: border-box; 
+  border:1px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+.folder-list {
+  padding: 0px;
+  width: 100%;
+  list-style: none;
+}
+
+.folder-list > li {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border:1px solid black;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+}
+  

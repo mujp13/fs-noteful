@@ -1,0 +1,19 @@
+.a-note {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-around;
+  width: 150%;
+}
+
+.note-name {
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.delete-button {
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}

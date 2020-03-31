@@ -1,0 +1,15 @@
+nav {
+  font-size: 35px;
+  padding: 10px;
+  margin-left: 100px;
+  text-decoration: none; 
+  
+}
+
+.bottom {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}

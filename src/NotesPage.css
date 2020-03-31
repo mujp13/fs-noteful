@@ -1,0 +1,14 @@
+.note-list {
+  list-style: none;
+  padding: 2px;
+  margin-top: 0px;
+}
+
+.note-list > li {
+  padding: 10px;
+  text-decoration: none;
+  width: 200%;
+  border:1px solid black;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
