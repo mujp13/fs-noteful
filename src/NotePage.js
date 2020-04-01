@@ -7,8 +7,12 @@ export default class NotePage extends Component {
 
   render() {
     const note = this.context.notes.find(p =>
-      p.id === this.props.match.params.noteId
+      p.id === +this.props.match.params.noteId
     )
+
+    if (!note) {
+      return null
+    }
 
     return (
       <div className='note-content'>

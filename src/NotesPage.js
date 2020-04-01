@@ -10,13 +10,13 @@ export default class NotesPage extends Component {
 
   render() {
     const { notes } = this.context;
-    const { folderid } = this.props.match.params;
+    const { folderId } = this.props.match.params;
     
     return (
       <div className="note-list-container">
         <ul className="note-list">
           {notes
-            .filter(note => !folderid || folderid === note.folderid)
+            .filter(note => !+folderId || +folderId === note.folderid)
             .map(note => (
               <Note note={note} />
             ))}
@@ -27,7 +27,7 @@ export default class NotesPage extends Component {
       </div>
     );
   }
-}
+} 
 
 
 NotesPage.propTypes = {

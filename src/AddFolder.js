@@ -13,9 +13,9 @@ class AddFolder extends Component {
   handleSubmit = e => {
     e.preventDefault();
     // get the form fields from the event
-    const { name } = e.target;
+    const { folder_name } = e.target;
     const folder = {
-      name: name.value
+      folder_name: folder_name.value
     }
 
     this.setState({ error: null });
@@ -38,7 +38,7 @@ class AddFolder extends Component {
         return res.json();
       })
       .then(data => {
-        name.value = ''
+        folder_name.value = ''
         this.context.addFolder(data)
         this.props.history.push('/')
       })
@@ -65,8 +65,8 @@ class AddFolder extends Component {
             {error && <p>{error.message}</p>}
           </div>
           <div>
-            <label htmlFor="name">Folder Name </label>
-            <input type="text" name="name" id="name" placeholder="Name of folder" required />
+            <label htmlFor="folder_name">Folder Name </label>
+            <input type="text" name="folder_name" id="folder_name" placeholder="Name of folder" required />
           </div>
           <div className="AddFolder__buttons">
             <button type="button" onClick={this.handleClickCancel}>

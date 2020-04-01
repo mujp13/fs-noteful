@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
 import NotefulContext from './NotefulContext';
-import config from './config'
+import config from './config';
 import './EditNote.css';
 
 const Required = () => (

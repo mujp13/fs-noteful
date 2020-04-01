@@ -13,11 +13,11 @@ class AddNote extends Component {
   handleSubmit = e => {
     e.preventDefault();
     // get the form fields from the event
-    const { name, content, folderId } = e.target;
+    const { note_name, content, folderid } = e.target;
     const note = {
-      name: name.value,
+      note_name: note_name.value,
       content: content.value,
-      folderId: folderId.value
+      folderid: folderid.value
     }
 
     this.setState({ error: null });
@@ -40,7 +40,7 @@ class AddNote extends Component {
         return res.json();
       })
       .then(data => {
-        name.value = ''
+        note_name.value = ''
         this.context.addNote(data)
         this.props.history.push('/')
       })
@@ -68,19 +68,19 @@ class AddNote extends Component {
             {error && <p>{error.message}</p>}
           </div>
           <div className="field">
-            <label htmlfor="name">Name </label>
-            <input type="text" name="name" id="name" placeholder="Name of folder" required />
+            <label htmlfor="note_name">Name </label>
+            <input type="text" name="note_name" id="note_name" placeholder="Name of folder" required />
           </div>
           <div className="field">
             <label htmlfor="content">Content </label>
             <textarea type="text" name="content" id="content"></textarea>
           </div>
           <div className="field">
-            <label htmlfor="folderId">Folder </label>
-            <select type="text" name="folderId" id="folderId">
+            <label htmlfor="folderid">Folder </label>
+            <select type="text" name="folderid" id="folderid">
               <option>...</option>
               {this.context.folders.map(folder =>
-              <option value={folder.id}>{folder.name}</option>
+              <option value={folder.id}>{folder.folder_name}</option>
             )}
             </select>
           </div>
