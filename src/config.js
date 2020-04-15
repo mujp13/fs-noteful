@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: `http://localhost:8000/api/notes`,
+  API_ENDPOINT: process.env.DATABASE_URL,
   API_KEY: process.env.REACT_APP_API_KEY
 }

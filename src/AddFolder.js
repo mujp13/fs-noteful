@@ -20,7 +20,7 @@ class AddFolder extends Component {
 
     this.setState({ error: null });
 
-    fetch('http://localhost:8000/api/folders', {
+    fetch('https://ancient-river-87952.herokuapp.com/api/folders', {
       method: 'POST',
       body: JSON.stringify(folder),
       headers: {

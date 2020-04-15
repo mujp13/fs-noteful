@@ -22,7 +22,7 @@ class AddNote extends Component {
 
     this.setState({ error: null });
 
-    fetch('http://localhost:8000/api/notes', {
+    fetch('https://ancient-river-87952.herokuapp.com/api/notes', {
       method: 'POST',
       body: JSON.stringify(note),
       headers: {

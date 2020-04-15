@@ -4,7 +4,7 @@ import NotefulContext from './NotefulContext';
 import './Note.css';
 
 function deleteNoteRequest(noteId, cb) {
-  fetch(`http://localhost:9090/notes/${noteId}`, {
+  fetch(`https://ancient-river-87952.herokuapp.com/api/notes/${noteId}`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json'
@@ -18,12 +18,8 @@ function deleteNoteRequest(noteId, cb) {
           throw error;
         });
       }
-      return res.json();
     })
-    .then(data => {
-      // call the callback when the request is successful
-      // this is where the App component can remove it from state
-      console.log({ data });
+    .then(() => {
       cb(noteId);
     })
     .catch(error => {

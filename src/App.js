@@ -61,7 +61,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:8000/api/folders', {
+    fetch('https://ancient-river-87952.herokuapp.com/api/folders', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -84,7 +84,7 @@ class App extends Component {
         }
       );
 
-    fetch('http://localhost:8000/api/notes')
+    fetch('https://ancient-river-87952.herokuapp.com/api/notes')
       .then(res => res.json())
       .then(
         result => {
@@ -131,6 +131,7 @@ class App extends Component {
                 <Route path="/add-folder" component={AddFolder} />
               </aside>
               <main>
+                
                 <Route exact path="/" component={NotesPage} />
                 <Route path="/note/:noteId" component={NotePage} />
                 <Route path="/folder/:folderId" component={NotesPage} />
